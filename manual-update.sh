@@ -418,10 +418,10 @@ for i in "${themes[@]}"; do
   git commit -a -m "Updated to latest template."
 
   # replace pageTitle: "Quartz 4", with pageTitle: "${i}", in `quartz.config.ts`
-  sed -e 's|pageTitle: "Quartz 4"|pageTitle: "'${i}'"|' quartz.config.ts
+  sed -e 's|pageTitle: "Quartz 4"|pageTitle: "'${i}'"|' -i "" quartz.config.ts
 
   # replace baseUrl: "quartz.jzhao.xyz", with baseUrl: "quartz-themes.github.io/${i}", in `quartz.config.ts`
-  sed -e 's|baseUrl: "quartz.jzhao.xyz"|baseUrl: "quartz-themes.github.io/'${i}'"|' quartz.config.ts
+  sed -e 's|baseUrl: "quartz.jzhao.xyz"|baseUrl: "quartz-themes.github.io/'${i}'"|' -i "" quartz.config.ts
 
   # replace ---.*?Quartz is a fast, with ---\n\nQuartz is a fase, in `docs/index.md` using perl
   # perl -0777 -i -pe 's/\n---.*?Quartz is a fast/\n---\n\nQuartz is a fast/' docs/index.md
