@@ -450,8 +450,8 @@ cd ..
 mkdir temp
 cd temp
 
-for i in "${small[@]}"; do
-  # for i in "${themes[@]}"; do
+# for i in "${small[@]}"; do
+for i in "${themes[@]}"; do
   echo "Start ${i}"
   git clone git@github.com:quartz-themes/${i}.git
   IN="${i}.null"
